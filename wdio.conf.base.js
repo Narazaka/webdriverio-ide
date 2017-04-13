@@ -2,7 +2,7 @@ const webpackConfig = require("./webpack.config.js");
 
 exports.config = {
   specs: [
-    "test/**/*.ts",
+    "src/test/**/*.ts",
   ],
   exclude: [
   ],

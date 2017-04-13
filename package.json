@@ -1,8 +1,11 @@
 {
   "name": "webdriverio-ide",
-  "version": "0.1.1",
-  "main": "./dist/playEvent.js",
-  "types": "./dist/playEvent.d.ts",
+  "version": "0.1.2",
+  "main": "./dist/lib/playEvent.js",
+  "types": "./dist/lib/playEvent.d.ts",
+  "files": [
+    "./dist/lib"
+  ],
   "scripts": {
     "dist": "rimraf dist && webpack",
     "doc": "typedoc --out doc --readme Readme.md --name \"API Document\" --disableOutputCheck --excludeNotExported src",

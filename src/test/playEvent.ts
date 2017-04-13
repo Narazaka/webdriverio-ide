@@ -3,7 +3,7 @@
 
 import * as assert from "power-assert";
 
-import {playEvent} from "../src/playEvent";
+import {playEvent} from "../lib/playEvent";
 
 describe("basic", () => {
   it("ok", () => {

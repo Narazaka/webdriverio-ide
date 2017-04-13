@@ -1,15 +1,17 @@
 const path = require("path");
 const webpack = require("webpack");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const tsconfig = require("./tsconfig.json");
+tsconfig.compilerOptions.outDir = "";
 
 module.exports = {
   devtool: "source-map",
   entry: {
-    "eventLogger": "./src/eventLogger.ts",
-    "playEvent": "./src/playEvent.ts",
+    "eventLogger": "./src/lib/eventLogger.ts",
+    "playEvent": "./src/lib/playEvent.ts",
   },
   output: {
-    filename: "[name].js",
+    filename: "lib/[name].js",
     path: path.join(__dirname, "./dist"),
     libraryTarget: "umd",
     library: "[name]",
@@ -20,6 +22,9 @@ module.exports = {
         test: /\.tsx?$/,
         loader: "ts-loader",
         exclude: /node_modules/,
+        options: {
+          compilerOptions: tsconfig.compilerOptions,
+        },
       },
       {
         test: /\.(pug|jade)$/,
