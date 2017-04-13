@@ -1,0 +1,17 @@
+doctype html
+html
+  head
+    meta(charset="utf-8")
+    title test
+    script(src="eventLogger.js")
+    script.
+      function toggle() {
+        if (document.body.style.background === "red") {
+          document.body.style.background = "";
+        } else {
+          document.body.style.background = "red";
+        }
+      }
+  body
+    input
+    button(onclick="toggle()") toggle

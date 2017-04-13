@@ -1,0 +1,37 @@
+{
+  "private": true,
+  "scripts": {
+    "dist": "rimraf dist && webpack",
+    "doc": "typedoc --out doc --readme Readme.md --name \"API Document\" --disableOutputCheck --excludeNotExported src",
+    "lint": "tslint src/**/*.ts*",
+    "test:browser:cli": "wdio wdio.conf.phantom.js",
+    "test:browser:real": "wdio wdio.conf.real.js"
+  },
+  "devDependencies": {
+    "@types/mocha": "^2.2.40",
+    "@types/power-assert": "^1.4.29",
+    "@types/webdriverio": "^4.6.1",
+    "espower-typescript": "^8.0.0",
+    "html-webpack-plugin": "^2.28.0",
+    "mocha": "^3.2.0",
+    "phantomjs-prebuilt": "^2.1.14",
+    "power-assert": "^1.4.2",
+    "pug": "^2.0.0-beta11",
+    "pug-loader": "^2.3.0",
+    "rimraf": "^2.6.1",
+    "selenium-standalone": "^6.2.0",
+    "ts-loader": "^2.0.3",
+    "tslint": "^5.0.0",
+    "typedoc": "^0.5.10",
+    "typescript": "^2.2.2",
+    "wdio-mocha-framework": "^0.5.9",
+    "wdio-phantomjs-service": "^0.2.2",
+    "wdio-selenium-standalone-service": "0.0.8",
+    "wdio-spec-reporter": "^0.1.0",
+    "wdio-static-server-service": "^1.0.1",
+    "wdio-webpack-service": "^1.0.1",
+    "webdriverio": "^4.6.2",
+    "webpack": "^2.3.3"
+  },
+  "dependencies": {}
+}
